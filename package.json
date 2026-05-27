@@ -1,0 +1,33 @@
+{
+  "name": "mdread",
+  "version": "0.1.0",
+  "description": "Mirror local Markdown files on a private, tailnet-only web server with short slugs.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Shyam Santhanam <santhanamss@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyamss/mdread.git"
+  },
+  "bin": {
+    "mdread": "src/mdread.ts"
+  },
+  "scripts": {
+    "serve": "bun src/mdread.ts serve",
+    "mdread": "bun src/mdread.ts"
+  },
+  "keywords": ["markdown", "tailscale", "tailnet", "self-hosted", "bun", "mermaid"],
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/markdown-it": "^14.1.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "github-markdown-css": "^5.9.0",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^14.2.0",
+    "mermaid": "^11.15.0"
+  }
+}
