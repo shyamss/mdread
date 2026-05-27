@@ -97,6 +97,23 @@ loginctl enable-linger "$USER"   # run without an active login
 
 Pair it with a daily timer running `mdread prune` to clean up expired docs.
 
+## Claude Code skill
+
+A [Claude Code](https://claude.com/claude-code) skill is bundled in
+[`skill/mdread/`](skill/mdread/SKILL.md). It teaches Claude to publish docs for you
+when you say things like *"mdread that file"*.
+
+Install it (user-level, available in every project):
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r skill/mdread ~/.claude/skills/        # or: ln -s "$PWD/skill/mdread" ~/.claude/skills/mdread
+```
+
+Restart Claude Code (or start a new session) and the skill is picked up
+automatically. Then just say *"mdread that doc"* and Claude runs the CLI and hands
+back the URL.
+
 ## License
 
 [MIT](LICENSE) © Shyam Santhanam
